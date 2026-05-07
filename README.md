@@ -1,94 +1,200 @@
 # 🚀 TeamFlow — Team Task Manager
 
-A full-stack web application for managing projects and tasks with role-based access control (Admin/Member).
-
-**Live Demo:** [your-railway-url.railway.app](https://your-url.railway.app)
-**Demo Video:** [Link to 2-5 min demo]
+TeamFlow is a full-stack task management web application designed to help teams manage projects, assign tasks, and track progress efficiently with role-based access control.
 
 ---
 
-## Features
+🌐 Live Demo
 
-- Authentication — Secure signup/login with JWT tokens
-- Project Management — Create projects, invite team members
-- Role-Based Access — Admin (full control) and Member (view + update status)
-- Task Management — Create, assign, prioritize, and track tasks
-- Dashboard — Personal overview of assigned tasks, overdue alerts, progress stats
-- Overdue Detection — Highlights tasks past their due date
+Frontend:
+https://heartfelt-endurance-production-3fbe.up.railway.app
 
----
-
-## Tech Stack
-
-- Frontend: React 18, React Router v6, Axios
-- Backend: Node.js, Express.js
-- Database: PostgreSQL
-- Auth: JWT + bcrypt
-- Deployment: Railway
+Backend API:
+https://teamflow-production-5fb0.up.railway.app/api/health
 
 ---
 
-## API Endpoints
+📂 GitHub Repository
 
-### Auth
+https://github.com/poojitha-R04/teamflow
+
+---
+
+✨ Features
+
+🔐 Authentication
+
+- User Signup & Login
+- JWT-based Authentication
+- Secure password hashing
+
+📁 Project Management
+
+- Create and manage projects
+- Add team members
+- Role-based access (Admin/Member)
+
+✅ Task Management
+
+- Create tasks
+- Assign tasks to users
+- Update task status
+- Set task priority
+- Due date tracking
+
+📊 Dashboard
+
+- Total Tasks
+- In Progress Tasks
+- Completed Tasks
+- Overdue Tasks
+
+---
+
+🛠️ Tech Stack
+
+Frontend
+
+- React.js
+- Tailwind CSS
+- Axios
+- React Router
+
+Backend
+
+- Node.js
+- Express.js
+- PostgreSQL
+- JWT Authentication
+- bcrypt.js
+
+Deployment
+
+- Railway
+
+---
+
+🗄️ Database Schema
+
+Tables:
+
+- users
+- projects
+- project_members
+- tasks
+
+---
+
+🔑 Role-Based Access Control
+
+Admin
+
+- Create projects
+- Assign tasks
+- Manage team members
+
+Member
+
+- View assigned tasks
+- Update task status
+
+---
+
+📡 API Endpoints
+
+Authentication
+
 - POST /api/auth/signup
 - POST /api/auth/login
-- GET  /api/auth/me
 
-### Projects
-- GET    /api/projects
-- POST   /api/projects
-- GET    /api/projects/:id
-- DELETE /api/projects/:id
-- POST   /api/projects/:id/members
-- DELETE /api/projects/:id/members/:uid
+Projects
 
-### Tasks
-- GET    /api/tasks/project/:id
-- GET    /api/tasks/dashboard/stats
-- POST   /api/tasks
-- PATCH  /api/tasks/:id
-- DELETE /api/tasks/:id
+- GET /api/projects
+- POST /api/projects
+
+Tasks
+
+- GET /api/tasks
+- POST /api/tasks
+- PUT /api/tasks/:id
 
 ---
 
-## Role Permissions
+⚙️ Local Setup
 
-| Action              | Admin | Member |
-|---------------------|-------|--------|
-| Create/delete tasks | YES   | NO     |
-| Update task status  | YES   | YES    |
-| Add/remove members  | YES   | NO     |
-| View project        | YES   | YES    |
-| Delete project      | YES (owner only) | NO |
+1. Clone Repository
+
+git clone https://github.com/poojitha-R04/teamflow.git
+
+cd teamflow
 
 ---
 
-## Running Locally
+2. Backend Setup
 
-### Backend
-```bash
 cd backend
-npm install
-cp .env.example .env
-# Fill in your DB credentials in .env
-npm run dev
-```
 
-### Frontend
-```bash
-cd frontend
 npm install
-cp .env.example .env
+
+Create .env
+
+PORT=8080
+DATABASE_URL=your_postgres_url
+JWT_SECRET=your_secret_key
+
+Run backend:
+
 npm start
-```
 
 ---
 
-## Deployment on Railway
+3. Frontend Setup
 
-1. Push to GitHub
-2. Go to railway.app and create New Project
-3. Add PostgreSQL plugin, copy DATABASE_URL
-4. Deploy backend with env vars: DATABASE_URL, JWT_SECRET, NODE_ENV=production
-5. Deploy frontend with REACT_APP_API_URL pointing to backend URL
+cd frontend
+
+npm install
+
+Create .env
+
+REACT_APP_API_URL=http://localhost:8080/api
+
+Run frontend:
+
+npm start
+
+---
+
+🚀 Deployment
+
+The application is fully deployed on Railway.
+
+Frontend:
+https://heartfelt-endurance-production-3fbe.up.railway.app
+
+Backend:
+https://teamflow-production-5fb0.up.railway.app
+
+---
+
+📸 Screenshots
+
+- Login Page
+- Signup Page
+- Dashboard
+- Project Management
+- Task Management
+
+---
+
+🎥 Demo Video
+
+[Add your demo video link here]
+
+---
+
+👨‍💻 Author
+
+Poojitha R04
+
+GitHub:
+https://github.com/poojitha-R04
